@@ -10,6 +10,7 @@ import com.example.consumoapicontoken.Models.Superhero
 import com.example.consumoapicontoken.Network.API
 import com.example.consumoapicontoken.Network.responce.LoginResponce
 import com.example.consumoapicontoken.databinding.ActivityMainBinding
+import com.example.consumoapicontoken.sharedPreferences.Shared.Companion.prefs
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnLogIn.setOnClickListener {
             logIn()
         }
-        getSuperHeros()
+        //getSuperHeros()
     }
 
     fun getSuperHeros(){
@@ -66,6 +67,7 @@ class MainActivity : AppCompatActivity() {
                                 Mostrar_SuperHero_Activity::class.java
                             )
                         )
+                        prefs.GuardarTokenSH(response.body()?.Token.toString())
                         Log.e("response", response.body()?.Token.toString())
                     }
                 }

@@ -8,6 +8,7 @@ import com.example.consumoapicontoken.Models.Superhero
 import com.example.consumoapicontoken.Network.API
 import com.example.consumoapicontoken.databinding.ActivityMainBinding
 import com.example.consumoapicontoken.databinding.ActivityMostrarSuperHeroBinding
+import com.example.consumoapicontoken.sharedPreferences.Shared.Companion.prefs
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,6 +20,7 @@ class Mostrar_SuperHero_Activity : AppCompatActivity() {
         binding = ActivityMostrarSuperHeroBinding.inflate(layoutInflater)
         setContentView(binding.root)
         getSuperHeroId()
+        //binding.txtMostrarPorId.text=prefs.obtenerToken()
     }
 
     fun getSuperHeroId() {
