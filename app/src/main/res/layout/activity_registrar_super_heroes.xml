@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrar_SuperHeroes_Activity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inptlytxtNombre"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="138dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtlyAniodebut"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inptlytxtNombre"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="138dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAnioDebut"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Debut" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtcontrasenialy"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtlyAniodebut"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="138dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtContrasenia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contrasenia"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtplaneta"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcontrasenialy"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="138dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtplanetaOrigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Planeta" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        app:layout_constraintTop_toBottomOf="@+id/txtplaneta"
+        app:layout_constraintLeft_toLeftOf="@+id/txtplaneta"
+        app:layout_constraintRight_toRightOf="@+id/txtplaneta"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

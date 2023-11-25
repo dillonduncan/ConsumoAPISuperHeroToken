@@ -28,20 +28,41 @@
 
     <TextView
         android:id="@+id/txtMostrarPorId"
-        android:layout_marginTop="20dp"
-        android:text="super hero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="super hero"
         app:layout_constraintLeft_toLeftOf="@+id/textinputlyBuscarId"
         app:layout_constraintRight_toRightOf="@+id/textinputlyBuscarId"
         app:layout_constraintTop_toBottomOf="@+id/textinputlyBuscarId" />
     <Button
+        android:id="@+id/btnRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscar"
-        android:id="@+id/btnBuscarId"
         android:layout_marginTop="50dp"
-        app:layout_constraintRight_toRightOf="@+id/textinputlyBuscarId"
+        android:layout_marginLeft="120dp"
+        android:text="Registrar"
         app:layout_constraintLeft_toLeftOf="@+id/textinputlyBuscarId"
-        app:layout_constraintTop_toBottomOf="@+id/textinputlyBuscarId"/>
+        app:layout_constraintRight_toRightOf="@+id/textinputlyBuscarId"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlyBuscarId" />
+    <Button
+        android:id="@+id/btnBuscarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="120dp"
+        android:text="Buscar"
+        app:layout_constraintLeft_toLeftOf="@+id/textinputlyBuscarId"
+        app:layout_constraintRight_toRightOf="@+id/textinputlyBuscarId"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlyBuscarId" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSuperHero"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscarId"
+        tools:listitem="@layout/ly_mostrat_superhero" />
 </androidx.constraintlayout.widget.ConstraintLayout>
