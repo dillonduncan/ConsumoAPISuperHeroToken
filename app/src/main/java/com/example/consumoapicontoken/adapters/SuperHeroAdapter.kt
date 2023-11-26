@@ -21,13 +21,10 @@ class SuperHeroAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val superhero = listaSuperHero[position]
-        holder.txtidSH.text = superhero.ID.toString()
-        holder.txtNombreSH.text = superhero.Nombre
-        holder.txtAnioDebut.text = superhero.AnioDebut.toString()
-        holder.txtPlanetaOrigen.text = superhero.PlanetaOrigenASuperHero
-        holder.btnBorrar.setOnClickListener {
-            listener.deleteSuperHero(superhero)
-        }
+        holder.txtidSH.text ="ID: "+ superhero.ID.toString()
+        holder.txtNombreSH.text = "Nombre: "+superhero.Nombre
+        holder.txtAnioDebut.text ="Año de debut: "+ superhero.AnioDebut.toString()
+        holder.txtPlanetaOrigen.text ="Planeta de origen: "+ superhero.PlanetaOrigenASuperHero
     }
 
     override fun getItemCount(): Int = listaSuperHero.size
@@ -37,6 +34,6 @@ class SuperHeroAdapter(
         val txtNombreSH = itemView.findViewById<TextView>(R.id.txtNombreSH)
         val txtAnioDebut = itemView.findViewById<TextView>(R.id.txtDebutAnio)
         val txtPlanetaOrigen = itemView.findViewById<TextView>(R.id.txtPlanetaOrigen)
-        val btnBorrar = itemView.findViewById<Button>(R.id.btnBorrarSH)
+       // val btnBorrar = itemView.findViewById<Button>(R.id.btnBorrarSH)
     }
 }
